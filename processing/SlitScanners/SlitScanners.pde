@@ -2,6 +2,7 @@ Scanner scanner;
 PGraphics buffer;
 ArrayList<Dot> dots;
 int numDots = 150;
+boolean showScan = true;
 
 void setup() {
   size(960, 540, P2D);
@@ -23,7 +24,13 @@ void draw() {
   buffer.endDraw();
   buffer.loadPixels();
   
-  scanner.run();
+  if (showScan) {
+    scanner.run();
+  } else {
+    tex.beginDraw();
+    tex.image(buffer, 0, 0, width, height);
+    tex.endDraw();
+  }
   
   bloomDraw();
   
