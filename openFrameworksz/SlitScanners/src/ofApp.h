@@ -1,7 +1,8 @@
 #pragma once
-
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "Dot.h"
+#include "Scanner.h"
 
 class ofApp : public ofBaseApp{
 
