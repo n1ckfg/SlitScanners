@@ -30,7 +30,7 @@ void ofApp::draw() {
 
 ofImage ofApp::wave(ofImage sourceImg) {
 	ofImage newImg;
-	newImg.clone(sourceImg);
+    newImg.setFromPixels(sourceImg.getPixels());//.clone(sourceImg);
 	float time = ofGetElapsedTimef();
 	for (int y=0; y<image1.getHeight(); y++) { 
 		for (int x=0; x<image1.getWidth(); x++) { 
